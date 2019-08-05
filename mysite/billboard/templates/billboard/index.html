@@ -1,0 +1,54 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'billboard/css/index.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="login-page">
+
+  <div class="form">
+      <!--<p id="hellouser">Hello AnonymousUser !</p>-->
+
+      <h2>Billboard</h2>
+      
+        <form class="login-form" role="form" action="/login/" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="NI1Qtfz3HZIXR0vjYSSEBIRKCnTmiz2AFysOrBTWz6ymoVEUHW84wxhYzlWog6wZ">
+            
+    <div class="row">
+        <span class="text-danger small"> </span>
+    </div>
+
+    <div class="row">
+        <span class="text-danger small"> </span>
+    </div>
+
+
+
+<span><label for="id_username">Username:</label></span><br>
+    <input autofocus="" id="id_username" maxlength="254" name="username" type="text" required="">
+
+<span><label for="id_password">Password:</label></span><br>
+    <input id="id_password" name="password" type="password" required="">
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        <div class="social-logos">
+                <a href="/oauth/login/facebook/"><img src={% static "/billboard/images/facebook.png" %} title="Facebook" alt="Facebook"></a><br>
+                <a href="/oauth/login/github/"><img src={% static "/billboard/images/github.png" %} title="GitHub" alt="GitHub"></a><br>
+                <a href="/oauth/login/twitter/"><img src={% static "/billboard/images/twitter.png" %} title="Twitter" alt="Twitter"></a><br>
+        </div>
+            <p class="message">Not registered? <a href="/board/register">Create an account</a></p>
+        </form>
+  </div>
+</div>
+</body>
+
+</html>
